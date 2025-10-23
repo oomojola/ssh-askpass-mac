@@ -68,7 +68,8 @@ class ViewController: NSViewController {
                 controlView.isHidden = true
             }
             
-            okButton.keyEquivalent = "" // reset default behaviour
+            okButton.keyEquivalent = "\r" // reset default behaviour
+            okButton.keyEquivalentModifierMask = [.command]
             cancelButton.keyEquivalent = "\r" // set to return key
         case .passphrase:
             if sshAskpass.account.isEmpty {
